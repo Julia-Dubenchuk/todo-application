@@ -1,0 +1,23 @@
+body {
+    background: #000000;
+    margin: 16px;
+}
+
+label {
+    display: block;
+    height: 50px;
+    border-radius: 25px;
+    background: rgb(36, 34, 34);
+}
+
+p {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 50px;
+    color: rgb(235, 203, 203);
+    padding-left: 16px;
+}
+
+input {
+    margin-right: 8px;
+}
