@@ -12,8 +12,10 @@ class App extends Component {
   }
   render() {
     console.log('array', this.state);
-    const todoArray = this.state.todos.map(todo => <TodoItem key={todo.id} text={todo.text} completed={todo.completed} />)
-    return (
+
+    const todoArray = this.state.todos .map(todo => <TodoItem key={todo.id} text={todo.text} completed={todo.completed} />);
+
+    return ( 
       <div>
         { todoArray }
       </div>

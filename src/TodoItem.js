@@ -5,7 +5,7 @@ export function TodoItem(props) {
     return (
         <label>
             <p>
-                <input type="checkbox" checked={props.completed} />
+                <input type="checkbox" checked={props.completed} onChange={() => {console.log('chenged')}} />
                 {props.text}
             </p>
         </label>
