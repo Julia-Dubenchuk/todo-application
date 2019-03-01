@@ -9,12 +9,26 @@ class App extends Component {
     this.state = {
       todos: todosData
     }
+    this.handleChange = this.handleChange.bind(this);
   }
+
+  handleChange (id) {
+    this.setState(prevState => {
+      let getArrayNewCompleted = prevState.todos.map(item => {
+        if(item.id === id) {
+          item.completed = !item.completed
+        } 
+        return item;
+      });
+    return {
+      todos: getArrayNewCompleted
+    }
+  })
+  }
+
   render() {
-    console.log('array', this.state);
-
-    const todoArray = this.state.todos .map(todo => <TodoItem key={todo.id} text={todo.text} completed={todo.completed} />);
-
+    const todoArray = this.state.todos.map(todo => <TodoItem key={todo.id} text={todo.text} completed={todo.completed} handleChange={this.handleChange} id={todo.id} />);
+    
     return ( 
       <div>
         { todoArray }
